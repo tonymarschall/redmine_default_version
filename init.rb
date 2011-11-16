@@ -10,6 +10,5 @@ Redmine::Plugin.register :redmine_default_version do
   author 'Tony Marschall'
   description 'With this plugin its possible to add a default version to a project. First you have to setup a version then you can choose a default version in project -> settings.'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url ' https://github.com/tonymarschall/redmine_default_version/'
 end
