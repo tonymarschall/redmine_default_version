@@ -1,3 +1,22 @@
-= default_version
+= Redmine default version
 
-Description goes here
+With this plugin its possible to add a default version to a project. 
+
+== Installation and Setup
+
+1. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
+2. Restart your Redmine web servers (e.g. apache, mongrel, thin, mod_rails)
+
+== Usage	
+
+First you have to setup a version then you can choose a default version in project -> settings. 
+
+== License
+
+This plugin is licensed under the GNU GPL v2. 
+
+== Project help
+
+If you need help you can contact the maintainer at the Bug Tracker. The bug tracker is located at https://github.com/tonymarschall/redmine_default_version/issues 
+
+
