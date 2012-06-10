@@ -1,8 +1,8 @@
 require 'redmine'
-require 'dispatcher'
 
-Dispatcher.to_prepare do
+ActionDispatch::Callbacks.to_prepare do
   Project.send(:include, RedmineDefaultVersion::Patches::ProjectPatch) unless Project.include?(RedmineDefaultVersion::Patches::ProjectPatch)
+  ProjectsHelper.send(:include, RedmineDefaultVersion::Patches::ProjectsHelperPatch) unless ProjectsHelper.include?(RedmineDefaultVersion::Patches::ProjectsHelperPatch)
 end
 
 Redmine::Plugin.register :redmine_default_version do
@@ -12,3 +12,5 @@ Redmine::Plugin.register :redmine_default_version do
   version '0.0.1'
   url ' https://github.com/tonymarschall/redmine_default_version/'
 end
+
+require_dependency 'redmine_default_version/hooks/view_projects_form_hook'
