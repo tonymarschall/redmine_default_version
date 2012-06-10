@@ -1,6 +1,9 @@
 require 'redmine'
+require 'dispatcher' unless defined? ActionDispatch
 
-ActionDispatch::Callbacks.to_prepare do
+dispatcher = if defined? ActionDispatch then ActionDispatch::Callbacks else Dispatcher end
+
+dispatcher.to_prepare do
   Project.send(:include, RedmineDefaultVersion::Patches::ProjectPatch) unless Project.include?(RedmineDefaultVersion::Patches::ProjectPatch)
   ProjectsHelper.send(:include, RedmineDefaultVersion::Patches::ProjectsHelperPatch) unless ProjectsHelper.include?(RedmineDefaultVersion::Patches::ProjectsHelperPatch)
 end
