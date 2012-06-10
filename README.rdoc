@@ -1,7 +1,9 @@
 = Redmine default version
 
-Please use https://github.com/benasher44/redmine_default_version since this repos is no longer maintained.
 With this plugin its possible to add a default version to a project. Heavily based on patches provided by http://www.redmine.org/issues/1828
+
+=== Please use https://github.com/benasher44/redmine_default_version since this repos is no longer maintained.
+
 
 == Installation
 
