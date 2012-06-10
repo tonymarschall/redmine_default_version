@@ -1,0 +1,3 @@
+<% if Project.exists?(@project) && !@project.shared_versions.empty? %>
+  <p><%= form.select :default_version_id, version_options_for_select(@project.shared_versions, @project.default_version), :include_blank => true %></p>
+<% end %>

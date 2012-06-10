@@ -1,4 +1,4 @@
 # English strings go here for Rails i18n
 en:
   my_label: "My label"
-  field_default_version: Default version
+  field_default_version: Default Version
